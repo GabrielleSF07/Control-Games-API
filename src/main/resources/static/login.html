@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins&display=swap">
+    <script src="https://kit.fontawesome.com/ad428ed578.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/loja.css">
+    <title>Login - Control Games</title>
+</head>
+
+<body>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <header class="header sticky-top scroll">
+        <div class="container-fluid d-flex justify-content-center align-items-center py-3">
+            <div class="d-flex gap-3 align-items-end">
+                <img src="imagens/logo.png" class="img-fluid rounded-circle" width="50">
+                <h1>Control Games</h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="d-flex align-items-center justify-content-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-5">
+
+                    <div class="card bg-dark text-white p-4 shadow ">
+
+                        <div class="d-flex mb-4 seletor-login pb-4">
+                            <button class="btn btn-user w-50 active" onclick="mostrarUsuario()">Usuário</button>
+                            <button class="btn btn-dev w-50" onclick="mostrarDev()">Desenvolvedor</button>
+                        </div>
+
+                        <div id="loginUsuario">
+                            <h4 class="mb-3">Login Usuário</h4>
+
+                            <input id="emailLogin" class="form-control mb-2" placeholder="Email">
+                            <input id="senhaLogin" type="password" class="form-control mb-3" placeholder="Senha">
+
+                            <button class="btn btn-success w-100 mb-3" onclick="loginUsuario()">Entrar</button>
+
+                            <p class="text-center mt-5 opacity-75">Não tem conta?</p>
+                            <button class="btn btn-outline-warning w-100" onclick="mostrarCadastro()">Criar
+                                conta</button>
+                        </div>
+
+                        <div id="cadastroUsuario" class="d-none">
+                            <h4 class="mb-3">Criar Conta</h4>
+
+                            <input id="nomeCadastro" class="form-control mb-2" placeholder="Nome">
+                            <input id="idadeCadastro" type="number" class="form-control mb-2" placeholder="Idade">
+                            <input id="emailCadastro" class="form-control mb-2" placeholder="Email">
+                            <input id="senhaCadastro" type="password" class="form-control mb-3" placeholder="Senha">
+
+                            <button class="btn btn-warning w-100 mb-2" onclick="cadastrar()">Cadastrar</button>
+
+                            <button class="btn btn-secondary w-100" onclick="voltarLogin()">Voltar</button>
+                        </div>
+
+                        <div id="loginDev" class="d-none">
+                            <h4 class="mb-3">Login Desenvolvedor</h4>
+
+                            <input id="emailDev" class="form-control mb-2" placeholder="Email">
+                            <input id="senhaDev" type="password" class="form-control mb-3" placeholder="Senha">
+
+                            <button class="btn btn-success w-100" onclick="loginDev()">Entrar</button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <section>
+            <div class="container">
+
+                <div class="footer-top d-flex justify-content-between pt-4 align-items-center">
+                    <h1 class="titulo-footer">Control Games</h1>
+
+                    <div class="redes d-flex gap-2">
+
+                        <a href="https://www.instagram.com" target="_blank" class="text-white link-warning">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="https://x.com" target="_blank" class="text-white link-warning">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+
+                        <a href="https://www.facebook.com" target="_blank" class="text-white link-warning">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+
+                        <a href="https://www.youtube.com" target="_blank" class="text-white link-warning">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <hr class="border-warning opacity-50">
+
+                <p class="text-white opacity-75 text-center pb-3 mt-3">
+                    © 2026 Control Games. Todos os direitos reservados.
+                </p>
+            </div>
+        </section>
+    </footer>
+
+    <script src="js/login.js"></script>
+</body>
+
+</html>

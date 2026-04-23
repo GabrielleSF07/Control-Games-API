@@ -1,0 +1,487 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+/*Tamanho, posição e cor do header*/
+.header {
+    background: linear-gradient(90deg, #6a00ff, #a100ff, #ff00d4);
+    transition: 0.3s;
+
+    z-index: 1000;
+}
+
+/*Efeito quando desce a pagina para baixo*/
+.header.scroll {
+    background: rgba(106, 0, 255, 0.5);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+
+/*Logo*/
+.header img {
+    width: 3.5rem;
+    box-shadow:
+        0 0 10px black;
+
+    transition: 0.4s;
+}
+
+.header img:hover {
+    color: #6a00ff;
+    box-shadow:
+        0 0 10px #ffe604,
+        0 0 20px #8c3aff,
+        0 0 40px #e100ff;
+}
+
+/*Nome*/
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    color: #fca910;
+    text-shadow:
+        0 0 10px black,
+        0 0 20px black,
+        0 0 15px #9900ff;
+    font-size: 2rem;
+
+    transition: 0.4s;
+}
+
+h1:hover {
+    color: #fffb00;
+    text-shadow:
+        0 0 10px #ffd000,
+        0 0 20px #ffd000;
+}
+
+/*Menu ajustado para celular*/
+@media (max-width: 530px) {
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    .header img {
+        width: 2.5rem;
+    }
+
+    .header h1 {
+        font-size: 1.3rem;
+    }
+
+    .menu-mobile {
+        width: 70% !important;
+    }
+}
+
+/*Menu*/
+nav ul li a {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.3rem;
+
+    color: #fca910;
+    text-shadow:
+        0 0 10px black,
+        0 0 20px black,
+        0 0 15px #ffd000;
+
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #fffb00;
+    text-shadow:
+        0 0 10px #ffd000,
+        0 0 20px #ffd000;
+
+    transform: scale(1.1);
+}
+
+/*Header ajustado para laptop*/
+@media (min-width: 992px) and (max-width: 1200px) {
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    .header img {
+        width: 4rem;
+    }
+
+    nav ul li a {
+        font-size: 1.3rem;
+    }
+}
+
+.offcanvas {
+    background: rgba(18, 0, 42, 0.6) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/*Fundo*/
+body {
+    background: linear-gradient(180deg, #0a0018, #12002a, #000);
+}
+
+/*Posição banner*/
+.banner {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+}
+
+/*Imagem do banner*/
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    opacity: 80%;
+}
+
+/*Título do banner*/
+.banner h2 {
+    width: 50%;
+
+    font-family: "Orbitron", sans-serif;
+    font-size: clamp(1.1rem, 5vw, 4.5rem);
+    color: #ffd000;
+
+    text-shadow:
+        0 0 10px black,
+        0 0 20px black,
+        0 0 40px black,
+        0 0 15px #ffd000;
+}
+
+/*Subtítulo do banner*/
+.banner p {
+    margin-top: 17rem;
+
+    font-family: "Sixtyfour", sans-serif;
+    font-size: clamp(0.8rem, 4vw, 3rem);
+    color: #00f7ff;
+
+    text-shadow:
+        0 0 5px black,
+        0 0 10px black,
+        0 0 20px #00f7ff,
+        0 0 40px #00f7ff;
+
+    animation: piscar 1.5s infinite;
+}
+
+/*Efeitos do subtítulo do banner*/
+@keyframes piscar {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+h2{
+    font-family: "Orbitron", sans-serif;;
+}
+
+/*Banner ajustado para celular*/
+@media (max-width: 530px) {
+    .banner {
+        height: auto;
+    }
+
+    .banner img {
+        height: auto;
+    }
+
+    .banner h2 {
+        width: 70%;
+    }
+
+    .banner p {
+        margin-top: 5rem;
+    }
+}
+
+.jogo {
+    flex: 0 0 calc(48% - 10px);
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .jogo {
+        flex: 0 0 calc((50% - 20px));
+    }
+}
+
+@media (min-width: 992px) {
+    .jogo {
+        flex: 0 0 calc((100% - 90px) / 3);
+    }
+}
+
+/* esconde scroll */
+.todosJogos::-webkit-scrollbar {
+    display: none;
+}
+
+.verJogos::-webkit-scrollbar {
+    display: none;
+}
+
+/*Configurações do jogo*/
+.jogo {
+    overflow: hidden;
+    transition: 0.3s;
+    width: 100%;
+}
+
+/*Hover do jogo*/
+.jogo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #7722ff;
+}
+
+/*Imagem do jogo ajustada*/
+.img-jogo {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+/*Botão de passar o jogo*/
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(66, 66, 66, 0.6);
+    border: none;
+    color: white;
+    font-size: 25px;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev {
+    left: 5vw;
+}
+
+.next {
+    right: 4vw;
+}
+
+/*Fundo do footer*/
+footer{
+    background-color: #370480ec;
+}
+
+/*Efeito dos links*/
+.transition {
+    transition: 0.6s;
+}
+
+/* Titulo footer */
+.titulo-footer{
+    font-size: 18px;
+}
+
+/* Icones das redes sociais */
+.redes{
+    font-size: 20px;
+}
+
+/* Links do menu do footer */
+.menu-footer a{
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Ajuste para tablet */
+@media (min-width: 768px){
+    .titulo-footer{
+        font-size: 20px;
+    }
+
+    .redes{
+        font-size: 24px;
+    }
+
+    .menu-footer a{
+        font-size: 15px;
+    }
+}
+
+/* Ajuste para pc */
+@media (min-width: 992px){
+    .titulo-footer{
+        font-size: 30px;
+    }
+
+    .redes{
+        font-size: 30px;
+    }
+
+    .menu-footer a{
+        font-size: 20px;
+    }
+}
+
+/*Botão que volta para o inicio da página*/
+#btnTopo{
+    bottom: 10px;
+    right: 50px;
+    z-index: 999;
+
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 992px){
+    #btnTopo{
+    bottom: 30px;
+    right: 10px;
+    z-index: 999;
+
+    width: 45px;
+    height: 45px;
+    }
+}
+
+/*Configurações da página*/
+body {
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    margin-bottom: 0;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #0a0018, #12002a, #000);
+    background-attachment: fixed;
+}
+
+@media (min-width: 992px) {
+
+    .dados label {
+        font-size: 25px;
+    }
+}
+
+/*Fundo roxo*/
+.bg-purple{
+    background-color: #3f088b;
+}
+
+/*Nome do jogo*/
+h3{
+    font-family: "Orbitron", sans-serif;
+    font-size: clamp(2rem, 2.5vw, 2.5rem);
+    color: #ffd000;
+
+    text-shadow:
+        0 0 10px black,
+        0 0 20px black,
+        0 0 40px black,
+        0 0 15px #ffd000;
+}
+
+/*Texto verde*/
+.text-green{
+    color: #76ff27;
+}
+
+/*Botão verde*/
+.btn-green{
+    background-color: #4db810;
+    color: #ffffff;
+}
+
+.btn-green:hover{
+    background-color: #2f7408;
+}
+
+/*Ajusta o footer*/
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.seletor-login {
+    display: flex;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.seletor-login button {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+/* ativo */
+.seletor-login .active {
+    background: #ffc107;
+    color: black;
+}
+
+/* padrão */
+.btn-dev {
+    background: #6c757d;
+    color: white;
+}
+
+.btn-user {
+    background: #6c757d;
+    color: white;
+}
+
+/* hover */
+.seletor-login button:hover {
+    background: #3f3f3f;
+    transform: scale(1.02);
+}
+
+@media (max-width: 576px) {
+    .seletor-login button {
+        font-size: 15px;
+        padding: 8px;
+    }
+}
+

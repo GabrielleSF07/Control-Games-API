@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sixtyfour&display=swap">
+    <script src="https://kit.fontawesome.com/ad428ed578.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="loja.css">
+    <script src="https://kit.fontawesome.com/ad428ed578.js" crossorigin="anonymous"></script>
+    <title>Control Games</title>
+</head>
+
+<body>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <header class="header sticky-top scroll">
+
+        <div class="container-fluid d-flex 
+                    flex-column flex-lg-row 
+                    justify-content-lg-between
+                    align-items-center align-items-lg-end 
+                    px-lg-5 px-2 p-lg-3 gap-3 pt-md-2 pb-md-2">
+
+            <div class="d-flex w-100 justify-content-between align-items-center">
+                <div class="d-flex gap-3 align-items-end">
+                    <img src="imagens/logo.png" class="img-fluid rounded-circle" alt="Logo">
+                    <h1>Control Games</h1>
+                </div>
+
+                <button class="btn d-lg-none text-white fs-3" data-bs-toggle="offcanvas" data-bs-target="#menuLateral">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+
+            <nav class="navMenu d-none d-lg-block d-block">
+                <div>
+                    <ul class="d-flex gap-5 flex list-unstyled m-0">
+
+                        <li><a href="meusJogosDev.html" class="text-decoration-none d-inline-block text-nowrap">Meus Jogos</a>
+                        </li>
+                        <li><a href="novoJogo.html" class="text-decoration-none d-inline-block text-nowrap">Novo
+                                Jogo</a></li>
+                        <li><a href="meuPerfilDev.html" class="text-decoration-none d-inline-block text-nowrap">Meu
+                                Perfil</a></li>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="offcanvas offcanvas-end menu-mobile text-bg-dark" tabindex="-1" id="menuLateral">
+        <div class="offcanvas-header">
+            <h2>Menu</h2>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+
+        <div class="offcanvas-body">
+            <ul class="list-unstyled d-flex flex-column gap-3">
+                <li><a href="meusJogosDev.html" class="text-decoration-none text-white fs-5">Meus Jogos</a></li>
+                <li><a href="novoJogo.html" class="text-decoration-none text-white fs-5">Novo Jogo</a></li>
+                <li><a href="meuPerfilDev.html" class="text-decoration-none text-white fs-5">Meu Perfil</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-8">
+
+                    <div class="card bg-dark text-white shadow border-0 p-4">
+
+                        <h3 class="mb-4 text-warning">Editar Jogo</h3>
+
+                        <form>
+
+                            <div class="mb-3">
+                                <label class="form-label">Nome</label>
+                                <input type="text" id="nome" class="form-control">
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Descrição</label>
+                                <textarea id="descricao" class="form-control" rows="3"></textarea>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Categoria</label>
+                                <input type="text" id="categoria" class="form-control">
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Faixa Etária</label>
+                                    <input type="number" id="faixaEtaria" class="form-control">
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Valor</label>
+                                    <input type="text" id="preco" class="form-control">
+                                </div>
+
+                            </div>
+
+                            <button type="button" class="btn btn-warning w-100 mt-3">
+                                Editar
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <section>
+            <div class="container">
+
+                <div class="footer-top d-flex justify-content-between pt-4 align-items-center">
+                    <h1 class="titulo-footer">Control Games</h1>
+
+                    <div class="redes d-flex gap-2">
+
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"
+                            class="text-white link-warning transition">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="https://x.com" target="_blank" rel="noopener noreferrer"
+                            class="text-white link-warning transition">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"
+                            class="text-white link-warning transition">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+
+                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer"
+                            class="text-white link-warning transition">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <hr class="border-warning opacity-50">
+
+                <div class="d-flex justify-content-between align-items-start">
+
+                    <nav class="navMenu">
+                        <ul class="menu-footer list-unstyled mb-0">
+                            <li><a href="meusJogosDev.html" class="opacity-75">Meus Jogos</a></li>
+                            <li><a href="novoJogo.html" class="opacity-75">Novo Jogo</a></li>
+                            <li><a href="meuPerfilDev.html" class="opacity-75">Meu Perfil</a></li>
+                        </ul>
+                    </nav>
+
+                    <button id="btnTopo" class="btn btn-warning rounded-circle">
+                        <i class="fa-solid fa-arrow-up"></i>
+                    </button>
+
+                </div>
+
+                <p class="text-white opacity-75 text-center pb-3 mt-3">© 2026 Control Games. Todos os direitos
+                    reservados.
+                </p>
+            </div>
+        </section>
+    </footer>
+    <script src="loja.js"></script>
+</body>
+
+</html>
