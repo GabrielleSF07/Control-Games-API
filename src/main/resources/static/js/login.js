@@ -134,3 +134,34 @@ async function cadastrar() {
         alert("Erro ao cadastrar usuário.");
     }
 }
+
+//Esconder senha
+function toggleSenhaLogin() {
+    const input = document.getElementById("senhaLogin");
+    const icon = document.getElementById("iconeOlhoLogin");
+
+    if (input.type === "password") {
+        input.type = "text";
+        icon.classList.remove("fa-eye");
+        icon.classList.add("fa-eye-slash");
+    } else {
+        input.type = "password";
+        icon.classList.remove("fa-eye-slash");
+        icon.classList.add("fa-eye");
+    }
+}
+
+function toggleSenhaDev() {
+    const input = document.getElementById("senhaDev");
+    const icon = document.getElementById("iconeOlhoDev");
+
+    if (input.type === "password") {
+        input.type = "text";
+        icon.classList.remove("fa-eye");
+        icon.classList.add("fa-eye-slash");
+    } else {
+        input.type = "password";
+        icon.classList.remove("fa-eye-slash");
+        icon.classList.add("fa-eye");
+    }
+}

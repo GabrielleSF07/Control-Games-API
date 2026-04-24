@@ -83,65 +83,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Usuario teste
-    const usuarioDados = [
-        {
-            nome: "Gabrielle Felix",
-            email: "gabi123@gmail.com",
-            senha: "654321",
-            idade: 44,
-            qntdeJogos: 3
-        }
-    ];
 
-    // Exibir dados do usuário
-    const container = document.querySelector(".dadosUsuario");
 
-    if (container) {
-        usuarioDados.forEach(usuario => {
-            container.innerHTML += `
-                <div class="dados bg-dark text-white p-4 mb-3">
 
-                        <h3 class="fs-1 mb-4">Meu Perfil</h3>
-
-                        <div class="mb-2">
-                            <label class="form-label">Nome:</label>
-                            <input class="form-control" value="${usuario.nome}" readonly>
-                        </div>
-
-                        <div class="mb-2">
-                            <label class="form-label">Email:</label>
-                            <input class="form-control" value="${usuario.email}" readonly>
-                        </div>
-
-                        <div class="mb-2">
-                            <label class="form-label">Senha</label>
-
-                            <div class="input-group">
-                                <input id="senhaInput" class="form-control" type="password" value="${usuario.senha}" readonly>
-
-                                <button class="btn btn-secondary" type="button" onclick="toggleSenha()">
-                                    <i id="iconeOlho" class="fa-solid fa-eye text-dark"></i>
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="row justify-content-center">
-                            <div class="mb-2 col-3">
-                                <label class="form-label">Idade:</label>
-                                <input class="form-control" value="${usuario.idade}" readonly>
-                            </div>
-
-                            <div class="mb-2 col-3">
-                                <label class="form-label">Quantidade de jogos:</label>
-                                <input class="form-control" value="${usuario.qntdeJogos}" readonly>
-                            </div>
-                        </div>
-
-                    </div>
-            `;
-        });
-    }
 
 });
 
@@ -354,66 +298,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const container = document.querySelector(".dadosDev");
 
     if (!container) return;
-
-    const devDados = [
-        {
-            empresa: "Toby Fox Productions",
-            email: "tobyfox@gmail.com",
-            senha: "fox123",
-            quantidadeJogos: 2,
-            totalVendido: 3500000,
-            lucroTotal: 55120000
-        }
-    ];
-
-    devDados.forEach(dev => {
-        container.innerHTML += `
-            <div class="bg-dark text-white p-4 rounded shadow">
-
-                <h3 class="text-warning mb-4">Meu Perfil</h3>
-
-                <div class="mb-3">
-                    <label class="form-label">Nome da Empresa</label>
-                    <input class="form-control" value="${dev.empresa}" readonly>
-                </div>
-
-                <div class="mb-3">
-                    <label class="form-label">Email</label>
-                    <input class="form-control" value="${dev.email}" readonly>
-                </div>
-
-                <div class="mb-2">
-                    <label class="form-label">Senha</label>
-
-                    <div class="input-group">
-                        <input id="senhaInput" class="form-control" type="password" value="${dev.senha}" readonly>
-
-                        <button class="btn btn-secondary" type="button" onclick="toggleSenha()">
-                            <i id="iconeOlho" class="fa-solid fa-eye text-dark"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <label class="form-label">Quantidade de Jogos</label>
-                        <input class="form-control" value="${dev.quantidadeJogos}" readonly>
-                    </div>
-
-                    <div class="col-md-6 mb-3">
-                        <label class="form-label">Total Vendido</label>
-                        <input class="form-control" value="${dev.totalVendido.toLocaleString()}" readonly>
-                    </div>
-                </div>
-
-                <div class="mb-3">
-                    <label class="form-label">Lucro Total</label>
-                    <input class="form-control" value="R$ ${dev.lucroTotal.toLocaleString()}" readonly>
-                </div>
-
-            </div>
-        `;
-    });
 
 });
 

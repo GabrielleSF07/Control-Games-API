@@ -40,7 +40,14 @@
                             <h4 class="mb-3">Login Usuário</h4>
 
                             <input id="emailLogin" class="form-control mb-2" placeholder="Email">
-                            <input id="senhaLogin" type="password" class="form-control mb-3" placeholder="Senha">
+
+                            <div class="input-group mb-3">
+                                <input id="senhaLogin" type="password" class="form-control" placeholder="Senha">
+
+                                <button class="btn btn-secondary" type="button" onclick="toggleSenhaLogin()">
+                                    <i id="iconeOlhoLogin" class="fa-solid fa-eye text-dark"></i>
+                                </button>
+                            </div>
 
                             <button class="btn btn-success w-100 mb-3" onclick="loginUsuario()">Entrar</button>
 
@@ -66,7 +73,14 @@
                             <h4 class="mb-3">Login Desenvolvedor</h4>
 
                             <input id="emailDev" class="form-control mb-2" placeholder="Email">
-                            <input id="senhaDev" type="password" class="form-control mb-3" placeholder="Senha">
+
+                            <div class="input-group mb-3">
+                                <input id="senhaDev" type="password" class="form-control" placeholder="Senha">
+
+                                <button class="btn btn-secondary" type="button" onclick="toggleSenhaDev()">
+                                    <i id="iconeOlhoDev" class="fa-solid fa-eye text-dark"></i>
+                                </button>
+                            </div>
 
                             <button class="btn btn-success w-100" onclick="loginDev()">Entrar</button>
                         </div>
