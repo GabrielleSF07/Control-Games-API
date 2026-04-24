@@ -65,24 +65,24 @@
 
     <main>
         <section>
-            <div class="container-fluid col-12 col-lg-8 mt-lg-5">
+            <div class="container-fluid col-11 col-lg-8 mt-lg-5">
                 <h2 class=" pt-4 ps-3 pe-3 text-nowrap text-white">Meus Jogos</h2>
 
                 <div class="d-flex bg-white rounded-pill align-items-center mt-3 mb-4 px-3">
-
                     <span class="icone fa-solid fa-magnifying-glass opacity-75"></span>
 
-                    <input type="search" class="pesquisar form-control border-0 shadow-none bg-transparent"
-                        placeholder="Pesquisar">
+                    <input type="search" id="pesquisaJogosDev"
+                           class="pesquisar form-control border-0 shadow-none bg-transparent"
+                           placeholder="Pesquisar">
                 </div>
-            </div>
-        </section>
 
-        <section>
-            <div class="position-relative justify-content-lg-center">
-                <div class="container mt-5 mb-5">
-                    <div class="row g-4 g-lg-5" id="listaJogosDev"></div>
+                <p id="mensagemBusca" class="text-white text-center mt-3 d-none">
+                    Nenhum jogo encontrado.
+                </p>
+
+                <div id="listaJogosDev" class="row g-4 mt-3 mb-5">
                 </div>
+
             </div>
         </section>
     </main>
@@ -143,7 +143,7 @@
             </div>
         </section>
     </footer>
-    <script src="js/loja.js"></script>
+    <script src="js/meusJogosDev.js"></script>
 </body>
 
 </html>

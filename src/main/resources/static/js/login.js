@@ -48,7 +48,6 @@ async function loginUsuario() {
         if (user) {
             localStorage.setItem("clienteLogadoId", user.id);
             localStorage.setItem("clienteLogadoNome", user.nome);
-            alert("Login OK!");
             window.location.href = "loja.html";
         } else {
             alert("Login inválido");
@@ -78,7 +77,6 @@ async function loginDev() {
         if (dev) {
             localStorage.setItem("desenvolvedorLogadoId", dev.id);
             localStorage.setItem("desenvolvedorLogadoNome", dev.nomeEmpresa);
-            alert("Login dev OK!");
             window.location.href = "meusJogosDev.html";
         } else {
             alert("Login inválido");
