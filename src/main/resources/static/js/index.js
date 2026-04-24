@@ -223,81 +223,11 @@ if (id) {
     }
 }
 
-//Listar jogos do desenvolvedor
-const lista = document.getElementById("listaJogosDev");
 
-if (lista) {
-    jogos.forEach((jogo, i) => {
-        lista.innerHTML += `
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card bg-dark text-white h-100 border-0 shadow">
 
-                    <img src="${jogo.imagem}" class="card-img-top">
 
-                    <div class="card-body d-flex flex-column">
 
-                        <h5 class="card-title text-warning">${jogo.nome}</h5>
 
-                        <p class="card-text small">${jogo.descricao}</p>
 
-                        <p class="mb-1"><strong>Categoria:</strong> ${jogo.categoria}</p>
-                        <p class="mb-1"><strong>Lançamento:</strong> ${jogo.dataLancamento}</p>
-                        <p class="mb-1"><strong>Faixa etária:</strong> ${jogo.faixaEtaria}+</p>
 
-                        <hr>
-
-                        <p class="mb-1"><strong>Preço:</strong> R$ ${jogo.preco}</p>
-                        <p class="mb-1"><strong>Vendas:</strong> ${jogo.vendas}</p>
-                        <p class="mb-3"><strong>Lucro total:</strong> R$ ${jogo.lucroTotal.toLocaleString()}</p>
-
-                        <div class="mt-auto d-flex gap-2">
-                            <button class="btn btn-warning w-100" onclick="editarJogo(${jogo.id})">
-                                Editar
-                            </button>
-
-                            <button class="btn btn-danger w-100" onclick="excluirJogo(${i})">
-                                Excluir
-                            </button>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        `;
-    });
-}
-
-//Tela de editar jogo
-function editarJogo(id) {
-    const jogo = jogos.find(j => j.id == id);
-
-    localStorage.setItem("jogoEditar", JSON.stringify(jogo));
-
-    window.location.href = "editarJogo.html";
-}
-
-//Exibir dados do jogo quando for editar
-document.addEventListener("DOMContentLoaded", () => {
-
-    if (!window.location.pathname.includes("editarJogo.html")) return;
-
-    const jogo = JSON.parse(localStorage.getItem("jogoEditar"));
-
-    if (!jogo) return;
-
-    document.getElementById("nome").value = jogo.nome;
-    document.getElementById("descricao").value = jogo.descricao;
-    document.getElementById("categoria").value = jogo.categoria;
-    document.getElementById("faixaEtaria").value = jogo.faixaEtaria;
-    document.getElementById("preco").value = jogo.preco;
-});
-
-//Exibir dados do desenvolvedor
-document.addEventListener("DOMContentLoaded", () => {
-
-    const container = document.querySelector(".dadosDev");
-
-    if (!container) return;
-
-});
 
