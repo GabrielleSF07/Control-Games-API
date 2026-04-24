@@ -75,8 +75,8 @@ async function carregarDetalheJogo() {
 
         container.innerHTML = `
             <div class="row g-4">
-                <div class="col-lg-7 col-12 col-md-11 mx-auto">
-                    <img src="${jogo.imagem}" class="img-fluid rounded shadow">
+                <div class="col-lg-7 col-12">
+                    <img src="${jogo.imagem}" style="width:600px !important; height:600px !important; object-fit:cover !important;">             
                 </div>
 
                 <div class="col-lg-5 col-11 mx-auto text-white bg-purple p-4 rounded d-flex flex-column">
@@ -85,7 +85,9 @@ async function carregarDetalheJogo() {
 
                         <h3 class="mb-4 mt-2">${jogo.nome}</h3>
 
-                        <p class="mb-5">${jogo.descricao || ""}</p>
+                        <p class="mb-5" style="min-height: 80px;">
+                            ${jogo.descricao || ""}
+                        </p>
 
                         <div class="bg-dark p-3 rounded">
                             <p><strong>Categoria:</strong> ${jogo.categoria || ""}</p>
